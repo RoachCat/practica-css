@@ -47,17 +47,17 @@ body{
 .header{
     width: 100%;
     height: 70px;
-    background-color: black;
+    background-color: #1b262c;
     font-family: "BebasNeue";
     color: white;
 }
 
 .logo{
     float: left;
-    width: 200px;
+    width: 215px;
     margin-top: 8px;
     margin-left: 20px;
-    background-color: #37bcf9 ;
+    background-color: #1b262c ;
     text-align: center;
     letter-spacing: 1px;
     cursor: pointer;
@@ -65,35 +65,39 @@ body{
     transition: all 100ms;
 }
 
-.logo:hover{
-    border-radius: 2px;
-    color: black;
-    background-color: #ccc;
-}
-
 .logo .gear{
     display: block;
     float: left;
-    margin-top: 3px;
-    margin-left: 26px;
-    font-size: 30px;
-    animation: rotate-gear 1s infinite linear;
+    margin-top: -9px;
+    font-size: 34px;
 }
 
 .logo:hover .gear{
-    animation: fromBellow 300ms linear;
+    animation: rotate-gear 150ms linear;
+    animation-fill-mode: forwards;
+}
+
+.logo :not(:hover) .gear{
+    animation: unrotate-gear 150ms linear;
+    animation-fill-mode: forwards;
 }
 
 @keyframes rotate-gear{
-    0%{
+    from{
         transform: rotateZ(0deg);
     }
-    50%{
-        transform: rotateZ(90deg);
+    to{
+        transform: rotateZ(45deg);
+    }    
+} 
+
+@keyframes unrotate-gear{
+    from{
+        transform: rotateZ(45deg);
     }
-    100%{
+    to{
         transform: rotateZ(0deg);
-    }
+    } 
 }
 
 @keyframes fromBellow{
@@ -112,14 +116,11 @@ body{
     display: block;
     font-size: 40px;
     float: right;
-    font-size: 40px;
+    font-size: 39px;
     margin-top: 5px;
-    margin-right: 65px;
+    margin-right: 8px;
+    text-shadow: 4px 4px 1px rgb(75, 74, 74);
     transition: all 300ms;
-}
-
-.logo:hover h3{
-    animation: fromRight 300ms linear;
 }
 
 @keyframes fromRight{
@@ -172,10 +173,10 @@ body{
     margin: 20px 0 20px 0;
     border: 10px solid white;
     box-shadow: 0px 0px 2px gray;
-    background: url(../img/bakbaner.png);
-    background-position: -260px -143px;
+    background: url(../img/blackwallpaper.jpg);
+    background-position: center;
     overflow: hidden;
-    animation: backBanner 10s linear;
+    animation: backBanner 6s linear infinite;
 }
 
 @keyframes backBanner{
@@ -183,7 +184,7 @@ body{
         background-position: 0px 0px;
     }
     100%{
-        background-position: -260px -143px;        
+        background-position: -260px 0px;        
     }
 }
 
@@ -277,6 +278,10 @@ body{
     text-align: center;
     color: #00538c;
     transition: all 150ms;
+}
+
+.card:first-child .category{
+    margin-bottom: 10px;
 }
 
 .card:hover .category{
@@ -580,22 +585,6 @@ body{
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 15px;
-}
-
-.blog{
-    height: 100px;
-    margin-top: 60px;
-    line-height: 100px;
-    text-align: center;
-}
-
-.blog a{
-    display: block;
-    font-family: "BebasNeue";
-    font-size: 40px;
-    letter-spacing: 3px;
-    color: #00538c;
-    text-decoration: none;
 }
 
 .footer{

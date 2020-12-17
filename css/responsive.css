@@ -82,6 +82,20 @@
 }
 
 @media (max-width:956px){
+  
+    .menu ul li {
+        margin: 0 9px 0 9px;
+    }
+
+    .card .category{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
     .articles article h4 a {
         display: block;
         width: 60%;
