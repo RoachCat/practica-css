@@ -206,6 +206,10 @@
     .login .user, .login .password{
         margin-left: 10px;
     }
+
+    .footer .location {
+        margin-top: 48px;
+    }
 }
 
 @media (max-width: 750px){
@@ -253,10 +257,6 @@
     .footer{
         flex-wrap: wrap;
         height: auto;
-    }
-
-    .footer .location{
-        margin-top: 0px;
     }
 
     .footer > div{
